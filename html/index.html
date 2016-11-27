@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insight -A CNC Production</title>
+    <!-- Bootstrap Styles-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="assets/css/font-awesome.css"/>
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="assets/css/nav.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/GalMenu.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/custom-styles.css"/>
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css"/> 
+    <link rel="stylesheet" href="assets/css/tipbox.css">
+    <link rel="stylesheet" href="assets/js/dataTables/dataTables.bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/introjs.css"/>
+    <link rel="stylesheet" href="assets/css/manhuaCardTip.css"/>
+    <link rel="stylesheet" href="assets/css/jBox.css"/>
+    <script type="text/javascript" src="lib/func.js"></script>
+    <script type="text/javascript" src="lib/reshape.js"></script>
+    <script type="text/javascript" src="lib/echarts.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/dataTool.js"></script>
+    <script type="text/javascript" src="lib/algorithm.js"></script>
+    <script type="text/javascript" src="lib/dark.js"></script>
+</head>
+
+<body>
+	<div id="right-side-navbar" class="J-global-toolbar">
+		<div class="toolbar-wrap J-wrap">
+			<div class="toolbar">
+			<!--	<!--<div class="toolbar-panels J-panel">
+					<div style="visibility: hidden;" class="J-content toolbar-panel tbar-panel-cart toolbar-animate-out">
+						//sdafasdfsdaf
+					</div>
+	
+					<div style="visibility: hidden;" data-name="follow" class="J-content toolbar-panel tbar-panel-follow">
+						<h3 class="tbar-panel-header J-panel-header">
+							<a href="#" target="_blank" class="title"> <i></i> <em class="title">我的关注</em> </a>
+							<span class="close-panel J-close"></span>
+						</h3>
+						<div class="tbar-panel-main">
+							<div class="tbar-panel-content J-panel-content">
+								<div class="tbar-tipbox2">
+									<div class="tip-inner"> <i class="i-loading"></i> </div>
+								</div>
+							</div>
+						</div>
+						<div class="tbar-panel-footer J-panel-footer"></div>
+					</div>
+					
+					<div style="visibility: hidden;" class="J-content toolbar-panel tbar-panel-history toolbar-animate-in">
+						<h3 class="tbar-panel-header J-panel-header">
+							<a href="#" target="_blank" class="title"> <i></i> <em class="title">我的足迹</em> </a>
+							<span class="close-panel J-close"></span>
+						</h3>
+						<div class="tbar-panel-main">
+							<div class="tbar-panel-content J-panel-content">
+								<div class="jt-history-wrap">
+									<ul>
+										<li class="jth-item">
+											<a href="#" class="img-wrap"> <img src="http://img10.360buyimg.com/n0/s100x100_g9/M03/0C/18/rBEHalCKCk8IAAAAAAD5nbR5xOAAACfgQENi_wAAPm1269.jpg" height="100" width="100" /> </a>
+											<a class="add-cart-button" href="#" target="_blank">加入购物车</a>
+											<a href="#" target="_blank" class="price">￥498.00</a>
+										</li>
+										<li class="jth-item">
+											<a href="#" class="img-wrap"> <img src="http://img10.360buyimg.com/n0/s100x100_g9/M03/0C/18/rBEHalCKCk8IAAAAAAD5nbR5xOAAACfgQENi_wAAPm1269.jpg" height="100" width="100" /></a>
+											<a class="add-cart-button" href="#" target="_blank">加入购物车</a>
+											<a href="#" target="_blank" class="price">￥498.00</a>
+										</li>
+									</ul>
+									<a href="#" class="history-bottom-more" target="_blank">查看更多足迹商品 &gt;&gt;</a>
+								</div>
+							</div>
+						</div>
+						<div class="tbar-panel-footer J-panel-footer"></div>
+					</div>
+				</div>
+				<div class="toolbar-header"></div>
+				<div class="toolbar-tabs J-tab">
+					<div class="toolbar-tab tbar-tab-cart">
+						<i class="tab-ico"></i>
+						<em class="tab-text ">购物车</em>
+						<span class="tab-sub J-count ">1</span>
+					</div>
+					<div class=" toolbar-tab tbar-tab-follow">
+						<i class="tab-ico"></i>
+						<em class="tab-text">我的关注</em>
+						<span class="tab-sub J-count hide">0</span> 
+					</div>
+					<div class=" toolbar-tab tbar-tab-history ">
+						<i class="tab-ico"></i>
+						<em class="tab-text">我的足迹</em>
+						<span class="tab-sub J-count hide">0</span>
+					</div>
+				</div>-->
+				-->
+				<div class="toolbar-footer">
+					<a href="#"><div class="toolbar-tab tbar-tab-top">  <i class="tab-ico  "></i> <em class="footer-tab-text">顶部</em>  </div></a>
+					<div class=" toolbar-tab tbar-tab-feedback"> <a href="#" target="_blank"> <i class="tab-ico"></i> <em class="footer-tab-text ">反馈</em> </a> </div>
+				</div>
+				<div class="toolbar-mini"></div>
+			</div>
+			<div id="J-toolbar-load-hook"></div>
+		</div>
+	</div>
+    <div id="wrapper">
+        <!--/. NAV TOP  -->
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" ><strong>Insight.</strong></a>
+			    <div id="sideNav" href=""><i class="fa fa-caret-right"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- /. NAV SIDE  -->
+        <nav class="navbar-default navbar-side" role="navigation" >
+            <div class="sidebar-collapse"  >
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a class="active-menu" href="#head" ><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#page-wrapper" ><i class="fa fa-edit"></i> Add & Delete<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-plus-circle"></i> Add Node<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Node Name " id="add-node-name">
+                                    </li>
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Node Weight " id="add-node-weight">
+                                    </li>
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Node Group " id="add-node-group">
+                                    </li>
+                                    <li>
+                                        <a href="#network-graph" style="text-align:right;" onclick="node_add()">Confirm!</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-plus"></i> Add Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Source Id " id="add-link-source">
+                                    </li>
+                                        <a style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to</a> 
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Target Id " id="add-link-target">
+                                    </li>
+                                    <li >
+                                        <a href="#network-graph" style="text-align:right;" onclick="link_add()">Confirm!</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-minus-circle"></i> Delete Node<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Node Id " id="delete-node-id">
+                                    </li>
+                                    <li>
+                                        <a href="#node-delete-confirm" style="text-align:right;" onclick="node_delete()">Confirm!</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-minus"></i> Delete Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Source Id " id="delete-link-source">
+                                    </li>
+                                        <a style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to</a> 
+                                    <li style="margin:3px;padding-left: 37px;">
+                                        <input class="form-control" placeholder="Enter Target Id " id="delete-link-target">
+                                    </li>
+                                    <li>
+                                        <a href="#network-graph" style="text-align:right;" onclick="link_delete()">Confirm!</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#network-graph" ><i class="fa fa-desktop"></i> Network Graph</a>
+                    </li>
+                    <li>
+                        <a href="#network-info" ><i class="fa fa-info"></i> Network Information</a>
+                    </li>
+                    <li>
+                    	<a href="#" ><i class="fa fa-list-ul"></i>More Details<span class="fa arrow"></span></a>
+                    	<ul class="nav nav-second-level">
+                    		<li>
+		                        <a href="#pocc-chart"><i class="fa fa-bar-chart-o"></i> POCC chart</a>
+		                    </li>
+		                    
+		                    <li>
+		                        <a href="#property-table" ><i class="fa fa-table"></i> Property Table</a>
+		                    </li>
+		                    <li>
+		                        <a href="#candidate-chart" ><i class="fa fa-circle-o"></i> Candidate chart</a>
+		                    </li>
+		                    <li>
+		                        <a href="#rv-rp-chart" ><i class="fa fa-bar-chart-o"></i> RV & RP chart</a>
+		                    </li>
+		                </ul>
+		            </li>
+                    <li >
+                        <a href="help.html"  target="_blank"><i class="fa fa-question" ></i> Help</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--/. MAIN BODY -->
+		<div id="page-wrapper">
+            <a id="head"></a>
+            <div class="header" >
+                <div class="col-md-12" id="introduction" style="display:block;">
+                    <div class="jumbotron">
+                        <h1>Network Visualization Demon</h1>
+                        <p>insight, a visualized data analysis platform.</p>
+                        <a class="btn btn-primary btn-lg" type="file" accept=".gexf,.xml" id="filename" onclick="get_filepath()" href="#head">Select a network</a>
+                       </p>
+                    </div>
+                </div>
+                <a id="open-graph-confirm"></a>
+	            <div class="col-md-12" id="network-id" style="display: none;top:10px">
+	    			<ol class="breadcrumb" style="height:54px" >
+	                    <strong id="show-file-name" style="font-size: 19px;">Network ID:&nbsp&nbsp&nbsp</strong>
+	    		    </ol>
+	    		</div>  
+    		</div>
+            
+            <div id="page-inner" >
+                <div class="row" id="1-5" style="display:none" >
+                    <a id="network-graph"></a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                    	<script type="text/javascript">
+						    $(document).ready(function() {
+						    	$('#graph,#overlay').GalMenu({
+						    		'menu': 'GalDropDown'
+						    	})
+						    });
+						</script>
+                    	<div id="option" class="GalMenu GalDropDown" style="z-index: 10000;cursor: pointer">
+							<div class="circle" id="gal">
+								<div class="ring">
+									<a onclick="cancel()" class="menuItem" title="信息">信息</a>
+									<a onclick="cancel()" class="menuItem">刷新</a>
+									<a onclick="tbd()" class="menuItem" >TBD</a>
+									<a onclick="cancel()" class="menuItem">取消</a>
+									<a onclick="help()" class="menuItem">帮助</a>
+									<a onclick="right_click_delete()" class="menuItem">移除</a>
+								</div>
+							</div>
+						</div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >
+                                Forced Network Graph
+                            </div>
+                            <div class="panel-body">
+                            	<ul class="nav nav-pills" id="nav-example" style="display:none">
+                                    <li class="active"><a href="#graph-nav" data-toggle="tab" onclick="graph()">Graph after removing</a>
+                                    </li>
+                                    <li class=""><a href="#graph-1-nav" data-toggle="tab" onclick="graph_1()">Graph after reshaping</a>
+                                    </li>
+                                    <li class=""><a href="#graph-ori-nav" data-toggle="tab" onclick="graph_ori()">The origin graph</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                	<div class="tab-pane fade active in" id="graph-nav" >
+                                		<div id="graph" style="height:700px"></div>
+                                	</div>
+                                    <div class="tab-pane fade" id="graph-1-nav" >
+                                        <div id="graph-1" style="height:700px"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="graph-ori-nav" >
+                                        <div id="graph-ori" style="height:700px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row" id="1-1" style="display:none">
+                    <a id="network-info"></a>  
+        			<div class="col-xs-6 col-md-3">
+                        <div class="detail-frame" >
+                            <h2>The number of network nodes.</h2>
+                        </div>
+        				<div class="panel panel-default">
+        					<div class="panel-body easypiechart-panel ">
+        						<h4>Nodes </h4>
+        						<div class="easypiechart" id="easypiechart-blue" data-percent="100" style="visibility:hidden"><span class="percent" id="node-count"></span>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="detail-frame">
+                            <h2>The number of network links.</h2>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-body easypiechart-panel">
+                                <h4>Links</h4>
+                                <div class="easypiechart" id="easypiechart-teal" data-percent="100" style="visibility:hidden"><span class="percent" id="node-link-number"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        			<div class="col-xs-6 col-md-3">
+                        <div class="detail-frame" >
+                            <h2>The ability of the network.</h2>
+                        </div>
+        				<div class="panel panel-default">
+        					<div class="panel-body easypiechart-panel">
+        						<h4>Efficiency</h4>
+        						<div class="easypiechart" id="easypiechart-red" style="visibility:hidden" data-percent="100" ><span class="percent" id="lethality"></span>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-xs-6 col-md-3">
+                        <div class="detail-frame" >
+                            <h2>The percentage of network connectivity.</h2>
+                        </div>
+        				<div class="panel panel-default">
+        					<div class="panel-body easypiechart-panel">
+        						<h4>Connectivity</h4>
+        						<div class="easypiechart" id="easypiechart-orange" data-percent="100" style="visibility:hidden"><span class="percent" id="connectivity"></span>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+                <div class="row" id="1-2" style="display:none">
+                    <a id="add-confirm"></a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >
+                                Network Graph
+                            </div>
+                            <div class="panel-body">
+                                <div id="echart-forced" style="height:700px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="1-4" style="display:none">
+                    <a id="property-table"></a>  
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Network Information Table
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>Id.</th>
+                                                <th>Name</th>
+                                                <th>Weight</th>
+                                                <th>Role</th>
+                                                <th>Degree</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="promatrix-table">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="1-6" style="display:none">
+                    <a id="degree-bc-1"></a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >
+                                Degree Distribution Chart
+                            </div>
+                            <div class="panel-body">
+                                <div id="degree-bc" style="height:700px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        		<div class="row" id="1-3" style="display:none">
+                    <a id="pocc-chart"></a>
+        			<div class="col-md-12 col-sm-12 col-xs-12">
+        				<div class="panel panel-default">
+        					<div class="panel-heading">
+                                POCC & CC  Bar Chart
+                            </div>
+                            <div class="panel-body">
+                                <div id="pocc-bar-chart" style="height:400px"></div>
+                            </div>
+        				</div>
+        			</div>
+                </div>
+                <a id="node-delete-confirm"></a>
+                <div class="row" id="2-1" style="display:none">
+                    <a id="rv-rp-chart"></a>
+                    <div class="col-md-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Replacement Value & Replacement Probability
+                            </div>
+                            <div class="panel-body">
+                               <div id="rv-rp-line-chart" style="height:400px"></div>
+                            </div>                      
+                        </div>   
+                    </div>
+                    <a id="candidate-chart"></a>  	
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Candidate & Probability
+                            </div>
+                            <div class="panel-body">
+                                <div id="candidate-pie-chart" style="height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+        		</div> 
+                <div class="row" id="2-2" style="display:none">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                reshape graph
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills">
+                                    <li class="active"><a href="#graph-remove-nav" data-toggle="tab" onclick="graph_remove()">Graph after removing</a>
+                                    </li>
+                                    <li class=""><a href="#graph-reshape-nav" data-toggle="tab" onclick="graph_reshape()">Graph after reshaping</a>
+                                    </li>
+                                    <li class=""><a href="#relationship-remove-nav" data-toggle="tab" onclick="relationship_remove()">Relationship after removing</a>
+                                    </li>
+                                    <li class=""><a href="#relationship-reshape-nav" data-toggle="tab" onclick="relationship_reshape()">Relationship after reshaping</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active in" id="graph-remove-nav" >   
+                                        <div id="graph-remove" style="height:700px"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="graph-reshape-nav" >
+                                        <div id="graph-reshape" style="height:700px"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="relationship-remove-nav">
+                                        <div id="relationship-remove" style="height:700px"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="relationship-reshape-nav">
+                                        <div id="relationship-reshape" style="height:700px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+	<script src="assets/js/easypiechart.js"></script>
+	<script src="assets/js/easypiechart-data.js"></script>
+	<script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+    <!--float nav bar-->
+    <script src = 'assets/js/nav.js' type="text/javascript"></script>
+    <!--right click menu-->
+    <script src = 'assets/js/GalMenu.js' type="text/javascript"></script>
+    <script type="text/javascript">
+	    var items = document.querySelectorAll('.menuItem');
+	    for (var i = 0,l = items.length; i < l; i++) {
+	    	items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+	    	items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+	    }
+	</script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js" type="text/javascript"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
+    <!--tip bubble-->
+    <script type="text/javascript">
+        $(function(){
+            var a;   
+            $(".col-xs-6").hover(function(){
+                if(a){
+                    window.clearTimeout(a)
+                }
+                var c=this;
+                a=window.setTimeout(function(){
+                    var g=$(".detail-frame",c).html();
+                    var i=$(".easypiechart-panel",c).offset().left;
+                    var h=$(".easypiechart-panel",c).offset().top;
+                    if($(c).width()==150){
+                        var j=160
+                    }else{
+                        var j=$(".easypiechart-panel",c).width()-40
+                    }
+                    $("body").append('<div class="detail-tip"></div>');
+                    if(i+j+180>$(window).width()){
+                        $(".detail-tip").html(g).append('<span class="arrow-right"></span>').css("left",i+j-300).css("top",h-10);
+                    }else{
+                        $(".detail-tip").html(g).append('<span class="arrow-left"></span>').css("left",i+j).css("top",h-10);
+                    }
+                },200)
+            },function(){
+                if(a){
+                    window.clearTimeout(a)
+                }
+                $(".detail-tip").remove()
+            });
+        });
+    </script>
+
+    <script src="assets/js/intro.js" type="text/javascript"></script>
+    <script >
+    introJs().start().oncomplete(function() {
+              alert("End of Introduction\nHave fun!");
+            });
+    </script>
+    
+    <script type="text/javascript" src="assets/js/jBox.js"></script>
+	<script type="text/javascript" src="assets/js/jBox-gyl.js"></script>
+
+</body>
+
+</html>

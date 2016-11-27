@@ -1,0 +1,10 @@
+/* cover-list */
+.cover-list{width:670px;margin:20px auto;}
+.cover-list li{float:left;margin:0 15px 15px 0;display:inline;width:152px;height:150px;overflow:hidden;}
+/* detail-frame */
+.detail-frame{display:none;}
+.arrow-left{position:absolute;width:6px;height:9px;top:30px;left:0;margin-left:-6px;background:url(../img/arrow_gray.gif) no-repeat;}
+.arrow-right{position:absolute;width:6px;height:9px;top:30px;left:178px;background:url(../img/arrow_gray.gif) no-repeat -6px 0;}
+.detail-tip{position:absolute;width:180px;background:#fff;border:1px solid #ddd;padding:10px;}
+.detail-tip h2{font-size:18px;line-height:18px;color:#3366cc;}
+.detail-tip p{margin:10px 0 0 0;font-size:14px;}

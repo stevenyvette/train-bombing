@@ -1,0 +1,29 @@
+
+.jBox-wrapper{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.jBox-title,.jBox-content,.jBox-container{position:relative;word-break:break-word}
+.jBox-container{background:#fff}
+.jBox-Tooltip .jBox-container,.jBox-Mouse .jBox-container{border-radius:3px;box-shadow:0 0 5px rgba(0, 0, 0, .3)}
+.jBox-Tooltip .jBox-title,.jBox-Mouse .jBox-title{padding:8px 10px 0;font-weight:bold}
+.jBox-hasTitle.jBox-Tooltip .jBox-content,.jBox-hasTitle.jBox-Mouse .jBox-content{padding-top:5px}
+.jBox-Modal .jBox-container{border-radius:3px;box-shadow:0 3px 15px rgba(0, 0, 0, .4), 0 0 5px rgba(0, 0, 0, .4)}.jBox-Modal .jBox-content{padding:12px
+15px}
+.jBox-Modal .jBox-title{border-radius:3px 3px 0 0;padding:10px
+15px;background:#f4f5f6;border-bottom:1px solid #ddd;text-shadow:0 1px 0 #fff}
+.jBox-title{padding-right:65px}
+.jBox-Notice{-webkit-transition:margin .2s;transition:margin .2s}
+.jBox-Notice .jBox-container{border-radius:3px;box-shadow:0 0 3px rgba(0, 0, 0, .2);color:#fff;text-shadow:0 -1px 0 #000;background:#333;background-image:linear-gradient(to bottom, #444, #222)}.jBox-Notice .jBox-content{border-radius:3px;padding:12px
+20px}.jBox-Notice .jBox-title{padding:8px
+20px 0;font-weight:bold}.jBox-hasTitle.jBox-Notice .jBox-content{padding-top:5px}.jBox-Notice-color .jBox-container{text-shadow:0 -1px 0 rgba(0, 0, 0, .3)}.jBox-Notice-gray .jBox-container{color:#666;text-shadow:0 1px 0 #fff;background:#f4f4f4;background-image:linear-gradient(to bottom, #fafafa, #f0f0f0)}.jBox-Notice-red .jBox-container{background:#b02222;background-image:linear-gradient(to bottom, #ee2222, #b02222)}.jBox-Notice-green .jBox-container{background:#70a800;background-image:linear-gradient(to bottom, #95cc2a, #70a800)}.jBox-Notice-blue .jBox-container{background:#2b91d9;background-image:linear-gradient(to bottom, #5abaff, #2b91d9)}.jBox-Notice-yellow .jBox-container{color:#744700;text-shadow:0 1px 0 rgba(255, 255, 255, .6);background:#ffb11f;background-image:linear-gradient(to bottom,#ffd665,#ffb11f)}#jBox-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;background-color:rgba(0, 0, 0, .6)}body[class^="jBox-blockScroll-"],
+body[class*=" jBox-blockScroll-"]{overflow:hidden}.jBox-draggable{cursor:move}@keyframes
+jBoxLoading{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}@-webkit-keyframes
+jBoxLoading{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}.jBox-loading .jBox-content{min-height:32px;min-width:32px}.jBox-loading .jBox-container:before{content:'Loading…';position:absolute;top:50%;left:50%;width:16px;height:16px;margin-top:-10px;margin-left:-10px;text-align:center}.jBox-loading .jBox-container:not(:required):before{content:'';border-radius:50%;border:2px
+solid rgba(0,0,0, 0.3);border-top-color:rgba(0,0,0, 0.6);-webkit-animation:jBoxLoading .6s linear infinite;animation:jBoxLoading .6s linear infinite}.jBox-IE8.jBox-Tooltip .jBox-container,
+.jBox-IE8.jBox-Mouse .jBox-container{border:1px
+solid #aaa}..jBox-IE8.jBox-Modal .jBox-container{border:3px
+solid #aaa}.jBox-NoticeBorder .jBox-container{border-radius:6px}.jBox-NoticeBorder .jBox-content,
+.jBox-NoticeBorder .jBox-title{padding-left:26px}.jBox-NoticeBorder.jBox-Notice-color .jBox-container{color:#fff;text-shadow:0 -1px 0 #000;background:rgba(0, 0, 0, .92)}.jBox-NoticeBorder.jBox-Notice-color .jBox-container:after{content:'';position:absolute;top:0;left:0;bottom:0;width:8px;border-radius:5px 0 0 5px;background-image:linear-gradient(45deg, rgba(255, 255, 255, .5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%, transparent 75%, transparent);background-size:18px 18px}.jBox-NoticeBorder.jBox-Notice-red .jBox-container:after{background-color:#e00}.jBox-NoticeBorder.jBox-Notice-green .jBox-container:after{background-color:#95cc2a}.jBox-NoticeBorder.jBox-Notice-blue .jBox-container:after{background-color:#4cb4ff}.jBox-NoticeBorder.jBox-Notice-yellow .jBox-container:after{background-color:#ffba00}#header-container{height:50px;line-height:50px;top:0;left:0;right:0;position:fixed;z-index:11000;background:#2e3740;background-image:linear-gradient(to bottom, #2e3740, #1e272f);box-shadow:0 0 5px rgba(0,0,0,.75)}#header{position:relative;width:860px;margin:auto;color:#959FAA;text-shadow:0 -1px 0 #000}
+.jBox-Tooltip .jBox-content,
+.jBox-Mouse .jBox-content{padding:10px
+20px}.jBox-Tooltip .jBox-title,
+.jBox-Mouse .jBox-title{padding-left:20px;padding-right:20px}#jBox-features{width:756px;margin:60px
+auto 80px}

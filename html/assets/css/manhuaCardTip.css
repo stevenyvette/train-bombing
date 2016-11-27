@@ -1,0 +1,20 @@
+
+.clear{clear:both;height:0;padding:0; margin:0; border:none;} 
+/*��Ա��Ƭ��ʾ����ʽ��ʼ*/
+.tl{width:14px;height:13px;position:absolute;top:-6px;left:20px;z-index:999;background:url(../img/widget_tip_t.gif) no-repeat;box-sizing: unset;}
+.tr{width:14px;height:13px;position:absolute;top:-6px;right:20px;background:url(../img/widget_tip_t.gif) no-repeat;box-sizing: unset;}
+.bl{width:14px;height:13px;position:absolute;top:177px;left:20px;z-index:999;background:url(../img/widget_tip_b.gif) no-repeat;box-sizing: unset;}
+.br{width:14px;height:13px;position:absolute;top:177px;right:20px;z-index:999;background:url(../img/widget_tip_b.gif) no-repeat;box-sizing: unset;}
+.lt{width:14px;height:13px;position:absolute;top:20px;left:-6px;z-index:999;background:url(../img/widget_tip_l.gif) no-repeat;box-sizing: unset;}
+.lb{width:14px;height:13px;position:absolute;bottom:20px;left:-7px;z-index:999;background:url(../img/widget_tip_l.gif) no-repeat;box-sizing: unset;}
+.rt{width:14px;height:13px;position:absolute;top:20px;right:-7px;z-index:999;background:url(../img/widget_tip_r.gif) no-repeat;box-sizing: unset;}
+.rb{width:14px;height:13px;position:absolute;bottom:20px;right:-7px;z-index:999;background:url(../img/widget_tip_r.gif) no-repeat;box-sizing: unset;}
+.user{-moz-box-sizing: unset;width:290px;height:184px;border:0;margin:0;padding:0;font-size:12px;font-weight:normal;text-align:left;color:#000;position:absolute;left:0;top:0; background:#fff; display:none;}
+.out{-moz-box-sizing: unset;margin:0;padding:0;border:0;background:#DADADA;filter:alpha(opacity=80);opacity:0.8;height:100%;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;z-index=1000;}
+.ins {-moz-box-sizing: unset;border:1px solid #CCC;background:#FFF;width:248px;height:142px;margin:0;padding:15px;position:absolute;top:5px;left:5px;overflow:hidden;z-index=1000;}
+.inload{border:1px solid #CCC;background:#FFF;width:248px;height:142px;margin:0;padding:15px;position:absolute;top:5px;left:5px;overflow:hidden;}
+.ins img{float:left;margin-right:15px;width:65px;height:75px;}
+.ins div{float:left;height:110px;width:160px; line-height:23px;}
+.gzjy{ float:right; text-align:right;}
+.gzjy a{ margin-left:10px; width:55px;}
+/*��Ա��Ƭ��ʾ����ʽ����
